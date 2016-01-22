@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap/variables';
+
+
+$font-family-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headings-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headings-font-weight: 400;
+
+
+@import 'bootstrap';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
