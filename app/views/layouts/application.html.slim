@@ -1,0 +1,25 @@
+doctype html
+html lang='ru'
+head
+  title OmskUnderground
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag :modernizr
+  = csrf_meta_tags
+body
+
+  .carousel.slide.carousel-fade data-ride='carousel' data-pause='false'
+      / Wrapper for slides
+      .carousel-inner role='listbox'
+          .item.active
+          .item
+          .item
+          .item
+          .item
+          .item
+
+  .title
+    h1 This is Awesome
+
+  = yield
+
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
