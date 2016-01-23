@@ -1,0 +1,1 @@
+METRO_COST = 24000000.0.freeze
