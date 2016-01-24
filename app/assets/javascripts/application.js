@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require validator.min
 //= require_tree .
 
 $('.carousel').carousel();

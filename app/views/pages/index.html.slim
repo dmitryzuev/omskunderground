@@ -1,2 +1,17 @@
-h1 Pages#index
-p Find me in app/views/pages/index.html.slim
+.container
+  .row
+    .col-sm-12.text-center.title
+      h1 Сколько будет стоить в омских метро?
+
+  .row
+    .col-sm-4.col-sm-offset-4.text-center
+
+      form.request_form data-toggle='validator'
+        .form-group
+          input.form-control [type='text' id='amount' name='amount' placeholder='Сумма' required='required' pattern='^[0-9]{1,15}$' data-error='Только цифры, пожалуйста, от 1 до 999999999999999']
+          span.help-block.with-errors
+        .form-group
+          input.form-control [type='text' id='expense' name='expense' placeholder='На что потрачено' required='required' data-error='Укажите, пожалуйста, на что потрачен охренилион']
+          span.help-block.with-errors
+        .form-group
+          button.btn.btn-success type='submit' Узнать стоимость

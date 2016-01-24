@@ -1,3 +1,40 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.input-group-field {
+    display: table-cell;
+    vertical-align: middle;
+    border-radius:4px;
+}
+.input-group-field .form-control, .input-group-field .form-control {
+    border-radius: inherit !important;
+}
+.input-group-field:not(:first-child):not(:last-child) {
+    border-radius:0;
+}
+.input-group-field:not(:first-child):not(:last-child) .form-control {
+    border-left-width: 0;
+    border-right-width: 0;
+}
+.input-group-field:last-child {
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+}
+
+.request_form {
+
+  input {
+    background-color: transparent;
+    color: #fff !important;
+    text-shadow: 0px 0px 2px rgba(200, 200, 200, 1);
+
+    &[placeholder] { color: #fff; font-weight: 300}
+    &::-webkit-input-placeholder { color: #fff; }
+    &::-moz-placeholder { color: #fff; }
+    &:-moz-placeholder { color: #fff; }
+    &:-ms-input-placeholder { color: #fff; }
+  }
+
+  button { width: 100%; }
+}

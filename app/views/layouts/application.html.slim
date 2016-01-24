@@ -3,7 +3,7 @@ html lang='ru'
 head
   title == @page_title || 'Омское метро &mdash; сколько вешать в граммах?'
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-  link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:300,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'
+  link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'
   = javascript_include_tag :modernizr
   = csrf_meta_tags
 body
@@ -25,14 +25,6 @@ body
         script type='text/javascript' src='//yastatic.net/share2/share.js' charset='utf-8'
         .ya-share2 data-services='vkontakte,facebook,twitter,odnoklassniki,moimir' data-counter=''
   
-  .container
-    .row
-      .col-sm-12.text-center.title
-        h1 Сколько будет стоить в омских метро?
-
-  .container
-    .row
-      .col-sm-12.text-center.content-box
-        == yield
+  == yield
 
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
