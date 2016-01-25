@@ -25,17 +25,9 @@ class StringDecoder
 
     result = 0
 
-    # Split string by numbers and words
-    # inputs = input.gsub(/(?<=[\d])(?=[а-яА-Я])/, ' ').split(' ')
-    # inputs.each_with_index do |i, index|
-    #   if POWERS[i] && float?(inputs[index-1].to_s) && index > 0
-    #     result += inputs[index-1].to_f * POWERS[i]
-    #   end
-    # end
-
     input.gsub(/(?<=[\d])(?=[а-яА-Я])/, ' ')
          .split(' ')
-         .map{ |i| POWERS[i]? POWERS[i].to_f : i.to_f }
+         .map { |i| POWERS[i] ? POWERS[i].to_f : i.to_f }
          .each_slice(2) do |slice|
       result += slice.inject(:*)
     end
