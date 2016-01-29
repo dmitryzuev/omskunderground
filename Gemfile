@@ -57,6 +57,7 @@ group :development do
   gem 'better_errors'
 end
 
+gem 'newrelic_rpm'
 gem 'slim-rails'
 gem 'puma'
 gem 'bootstrap-sass', '~> 3.3.5'
