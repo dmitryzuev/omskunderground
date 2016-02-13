@@ -32,4 +32,14 @@ RSpec.describe StringDecoder do
     input = '1.44 миллиарда'
     expect(decoder.call(input)).to equal(1440000000.0)
   end
+
+  it 'decodes in different case' do
+    input = '1.44 МилЛиАрда'
+    expect(decoder.call(input)).to equal(1440000000.0)
+  end
+
+  it 'decodes with dots as commas' do
+    input = '1,426.233.234.43'
+    expect(decoder.call(input)).to equal(1426233234.43)
+  end
 end
